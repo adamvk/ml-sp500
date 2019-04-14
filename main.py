@@ -83,6 +83,8 @@ def calculateCorrectGuesses(predicted, actual):
 # Define train and test datasets
 data, data_validation = generateSequentialData(close, volume)
 n_train_samples = int(len(data) * 0.8)
+np.random.seed(1)
+np.random.shuffle(data)
 train = data[:n_train_samples, :]
 test = data[n_train_samples:, :]
 train_X = train[:, :(days_per_sample - days_to_predict)]
