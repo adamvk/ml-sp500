@@ -9,7 +9,7 @@ from keras.layers import Dense, concatenate
 from sklearn.metrics import mean_squared_error
 
 # Load the data
-sp500_csv = pd.read_csv(r'C:\Users\adam.vonkraemer\Google Drive\ML-NEXT\Rådata\GSPC.csv')
+sp500_csv = pd.read_csv(r'GSPC.csv')
 
 # Define which dates and values to include in the data
 date = np.asarray(sp500_csv['Date'].values)
