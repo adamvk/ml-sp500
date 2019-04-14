@@ -152,7 +152,7 @@ for i in range(0, len(yhat)):
 rmse = np.sqrt(mean_squared_error(data_validation_y, yhat))
 print("RMSE: ", rmse)
 
-# Calculate and print correct and incorrect number of guesses
+# Calculate and print correct number of guesses
 correctguesses = calculateCorrectGuesses(yhat, data_validation_y)
 print("Correct guesses: ", (correctguesses / len(data_validation_y)) * 100, "%")
 
