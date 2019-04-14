@@ -57,8 +57,8 @@ def generateSequentialData(close, volume):
             data_validation[r - len(close) + days_per_sample * 2].append(
                 [normalizeIndex(close[c + r], close_max, close_min),
                  normalizeIndex(volume[c + r], volume_max, volume_min),
-                 normalizeIndex(close[c + r], high_max, high_min),
-                 normalizeIndex(close[c + r], low_max, low_min)])
+                 normalizeIndex(high[c + r], high_max, high_min),
+                 normalizeIndex(low[c + r], low_max, low_min)])
     return np.asarray(data), np.asarray(data_validation)
 
 
